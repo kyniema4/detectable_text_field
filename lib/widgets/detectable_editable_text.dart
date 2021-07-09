@@ -213,14 +213,14 @@ class DetectableEditableTextState extends EditableTextState {
       composing: textEditingValue.composing,
     );
 
-    if (detections.isEmpty) {
-      /// use same method as default textField to show composing underline
-      return widget.controller.buildTextSpan(
-        // context: context,
-        style: widget.style,
-        withComposing: !widget.readOnly,
-      );
-    }
+    // if (detections.isEmpty) {
+    //   /// use same method as default textField to show composing underline
+    //   return widget.controller.buildTextSpan(
+    //     context: context,
+    //     style: widget.style,
+    //     withComposing: !widget.readOnly,
+    //   );
+    // }
     return composer.getComposedTextSpan();
   }
 }
